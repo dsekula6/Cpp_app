@@ -1,0 +1,53 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Unit1.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#endif
+
+#include <vcl.h>
+
+#ifdef EXPORTS
+	#define DLL_EXPORT __declspec(dllexport)
+#else
+	#define DLL_EXPORT __declspec(dllexport)
+#endif
+
+class Korisnik {
+private:
+	String username;
+	String password;
+
+public:
+	void SetUsername(String _username) {
+		username = _username;
+	}
+	void SetPassword(String _password) {
+		TIdHashMessageDigest5* md5Pass = new TIdHashMessageDigest5;
+		password = md5Pass->HashStringAsHex(_password);
+
+		delete md5Pass;
+
+	}
+	String GetUsername() {
+		return username;
+	}
+	String GetPassword() {
+		return password;
+	}
+	bool CompareUsername(String UserPass) {
+		if (username.Compare(UserPass)==0){
+			return true;
+		}
+		return false;
+	}
+	bool ComparePassword(String UserPass) {
+		if (password.Compare(UserPass)==0){
+			return true;
+		}
+		return false;
+	}
+
+};

@@ -1,0 +1,185 @@
+object FormLogin: TFormLogin
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Login'
+  ClientHeight = 488
+  ClientWidth = 616
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  TextHeight = 15
+  object LabelUsername: TLabel
+    Left = 28
+    Top = 150
+    Width = 77
+    Height = 23
+    Caption = 'Username'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object LabelPassword: TLabel
+    Left = 28
+    Top = 187
+    Width = 70
+    Height = 23
+    Caption = 'Password'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Image1: TImage
+    Left = 28
+    Top = 24
+    Width = 190
+    Height = 105
+    Stretch = True
+  end
+  object EditUsername: TEdit
+    Left = 113
+    Top = 147
+    Width = 105
+    Height = 31
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clInactiveCaptionText
+    Font.Height = -17
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    TextHint = 'username'
+  end
+  object EditPassword: TEdit
+    Left = 113
+    Top = 184
+    Width = 105
+    Height = 31
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clInactiveCaptionText
+    Font.Height = -17
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    PasswordChar = '*'
+    TabOrder = 1
+    TextHint = 'password'
+  end
+  object ButtonLogin: TButton
+    Left = 28
+    Top = 253
+    Width = 190
+    Height = 36
+    Caption = 'Login'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+    OnClick = ButtonLoginClick
+  end
+  object ButtonRegister: TButton
+    Left = 28
+    Top = 312
+    Width = 190
+    Height = 25
+    Caption = 'Register'
+    TabOrder = 3
+    OnClick = ButtonRegisterClick
+  end
+  object Edit1: TEdit
+    Left = 344
+    Top = 56
+    Width = 121
+    Height = 23
+    TabOrder = 4
+    Text = 'Edit1'
+  end
+  object Edit2: TEdit
+    Left = 344
+    Top = 85
+    Width = 121
+    Height = 23
+    TabOrder = 5
+    Text = 'Edit1'
+  end
+  object Edit3: TEdit
+    Left = 344
+    Top = 114
+    Width = 121
+    Height = 23
+    TabOrder = 6
+    Text = 'Edit1'
+  end
+  object Edit4: TEdit
+    Left = 344
+    Top = 143
+    Width = 121
+    Height = 23
+    TabOrder = 7
+    Text = 'Edit1'
+  end
+  object Button1: TButton
+    Left = 496
+    Top = 55
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 8
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 496
+    Top = 86
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 9
+    OnClick = Button2Click
+  end
+  object SQLQuery1: TFDQuery
+    Connection = SqlfreehostingConnection
+    Left = 77
+    Top = 18
+  end
+  object SqlfreehostingConnection: TFDConnection
+    Params.Strings = (
+      'User_Name=x5CKIvN4hP'
+      'Database=x5CKIvN4hP'
+      'Server=remotemysql.com'
+      'Password=Vg7Hvluky9'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 26
+    Top = 20
+  end
+  object CryptographicLibrary1: TCryptographicLibrary
+    Left = 125
+    Top = 20
+  end
+  object Codec1: TCodec
+    AsymetricKeySizeInBits = 1024
+    AdvancedOptions2 = []
+    CryptoLibrary = CryptographicLibrary1
+    Left = 53
+    Top = 63
+    StreamCipherId = 'native.StreamToBlock'
+    BlockCipherId = 'native.AES-256'
+    ChainId = 'native.ECB'
+  end
+end

@@ -1,0 +1,67 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "korisnik.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#include <IdHashMessageDigest.hpp>
+#include <idhashsha.hpp>
+#include <memory>
+
+#ifdef EXPORTS
+	#define DLL_EXPORT __declspec(dllexport)
+#else
+	#define DLL_EXPORT __declspec(dllimport)
+#endif
+
+
+
+Korisnik {
+public:
+	SetUsername(String _username) {
+		username = _username;
+	}
+	SetPassword(String _password) {
+		String salt = "$%W$GT---#$EFSD841635dfggfda%$e#$#fcxsseee#7VNZeoi";
+        _password += salt;
+		TIdHashSHA1* sha1pass = new TIdHashSHA1;
+		password = sha1pass->HashStringAsHex(_password);
+
+		delete sha1pass;
+
+	}
+	SetIdUser(String _username) {
+		username = _username;
+	}
+	GetUsername() {
+		return username;
+	}
+	GetPassword() {
+		return password;
+	}
+	GetIdUser() {
+        return idUser;
+    }
+	CompareUsername(String UserPass) {
+		if (username.Compare(UserPass)==0){
+			return true;
+		}
+		return false;
+	}
+	ComparePassword(String UserPass) {
+		if (password.Compare(UserPass)==0){
+			return true;
+		}
+		return false;
+	}
+	Destroy() {
+    	delete this;
+	};
+
+};
+
+Korisnik* CreateDllClassInstance() {
+	return new Korisnik;
+};
+

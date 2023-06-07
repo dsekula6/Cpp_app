@@ -1,0 +1,76 @@
+//---------------------------------------------------------------------------
+
+#ifndef Search123H
+#define Search123H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ComCtrls.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Graphics.hpp>
+#include <Data.Bind.Components.hpp>
+#include <Data.Bind.EngExt.hpp>
+#include <Data.Bind.ObjectScope.hpp>
+#include <IdBaseComponent.hpp>
+#include <IdComponent.hpp>
+#include <IdHTTP.hpp>
+#include <IdIntercept.hpp>
+#include <IdInterceptThrottler.hpp>
+#include <IdIOHandler.hpp>
+#include <IdIOHandlerSocket.hpp>
+#include <IdIOHandlerStack.hpp>
+#include <IdSSL.hpp>
+#include <IdSSLOpenSSL.hpp>
+#include <IdTCPClient.hpp>
+#include <IdTCPConnection.hpp>
+#include <REST.Client.hpp>
+#include <REST.Types.hpp>
+#include <System.Bindings.Outputs.hpp>
+#include <System.Rtti.hpp>
+#include <Vcl.Bind.DBEngExt.hpp>
+#include <Vcl.Bind.Editors.hpp>
+//---------------------------------------------------------------------------
+class TFormSearch : public TForm
+{
+__published:	// IDE-managed Components
+	TListView *ListView1;
+	TProgressBar *ProgressBar1;
+	TButton *ButtonAddNew;
+	TButton *ButtonSearch;
+	TEdit *Edit1;
+	TLabel *Label1;
+	TImage *Image1;
+	TButton *ButtonThrottle1;
+	TButton *ButtonThrottle2;
+	TMemo *Memo1;
+	TRESTClient *RESTClient1;
+	TRESTRequest *RESTRequest1;
+	TRESTResponse *RESTResponse1;
+	TIdHTTP *Download;
+	TIdSSLIOHandlerSocketOpenSSL *IdSSLIOHandlerSocketOpenSSL1;
+	TBindingsList *BindingsList1;
+	TLinkControlToField *LinkControlToField1;
+	TLinkControlToField *LinkControlToField2;
+	TIdInterceptThrottler *IdInterceptThrottler1;
+	TButton *ButtonAddImage;
+	void __fastcall ButtonSearchClick(TObject *Sender);
+	void __fastcall FormCreate(TObject *Sender);
+	void __fastcall ButtonAddNewClick(TObject *Sender);
+	void __fastcall ButtonThrottle1Click(TObject *Sender);
+	void __fastcall ButtonThrottle2Click(TObject *Sender);
+	void __fastcall ListView1DblClick(TObject *Sender);
+	void __fastcall ButtonAddImageClick(TObject *Sender);
+	void __fastcall DownloadWork(TObject *ASender, TWorkMode AWorkMode, __int64 AWorkCount);
+	void __fastcall DownloadWorkBegin(TObject *ASender, TWorkMode AWorkMode, __int64 AWorkCountMax);
+
+
+private:	// User declarations
+public:		// User declarations
+	__fastcall TFormSearch(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TFormSearch *FormSearch;
+//---------------------------------------------------------------------------
+#endif

@@ -1,0 +1,2 @@
+USER_BMP BITMAP "..\\dll\\logo.bmp"
+USER_JPG RCDATA "..\\dll\\logo.jpg"

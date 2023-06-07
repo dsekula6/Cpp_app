@@ -1,0 +1,74 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Albumi.h"
+#include <System.JSON.hpp>
+#include <vcl.h>
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+class Album {
+private:
+	String id, name, artist, coverUrl, tracklistCount, albumVariant;
+public:
+
+	void LoadFromJSONArray(TJSONArray* ResultsArray, int i) {
+
+		String name2 = ResultsArray->Items[i]->GetValue<UnicodeString>("title");
+		id = ResultsArray->Items[i]->GetValue<UnicodeString>("id");
+		artist = "";
+		name = "";
+		coverUrl = ResultsArray->Items[i]->GetValue<UnicodeString>("thumb");
+
+		bool AlbumArtistBool = false;
+
+		for (int j = 0; j < name2.Length(); j++) {
+			 if (name2.SubString(j,1)=="-") {
+				AlbumArtistBool = true;
+			}
+		}
+
+		if (AlbumArtistBool) {
+			for (int j = 1; j < name2.Length(); j++) {
+				if (name2.SubString(j,1)=="-") {
+					break;
+				}
+				else {
+				artist += name2.SubString(j,1);
+				}
+			}
+			int j = 1;
+			bool AlbumNameBool = false;
+			for (j = 1; j < name2.Length(); j++) {
+				if (name2.SubString(j,1)=="-") {
+					AlbumNameBool = true;
+					break;
+				}
+
+			}
+			if (AlbumNameBool) {
+				for (int k = j+2; k < name2.Length()+1; k++) {
+					name += name2.SubString(k,1);
+				}
+			}
+		}
+	  }
+	  void LoadFromListItem(TListItem* Selected) {
+		id = Selected->Caption;
+		name = Selected->SubItems->ToStringArray()[0];
+		artist = Selected->SubItems->ToStringArray()[1];
+		coverUrl = Selected->SubItems->ToStringArray()[2];
+
+	  }
+
+	  String GetId() {return id;}
+	  String GetName() {return name;}
+	  String GetArtist() {return artist;}
+	  String GetCoverUrl() {return coverUrl;}
+	  String GetTracklistCount() {return tracklistCount;}
+	  String GetAlbumVariant() {return albumVariant;}
+
+
+};
+

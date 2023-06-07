@@ -1,0 +1,29 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+//---------------------------------------------------------------------------
+class TFLogin : public TForm
+{
+__published:	// IDE-managed Components
+	TEdit *EditUsername;
+	TEdit *EditPassword;
+	TLabel *LabelUsername;
+	TLabel *LabelPassword;
+	TButton *ButtonLogin;
+	TButton *ButtonRegister;
+	void __fastcall ButtonLoginClick(TObject *Sender);
+	void __fastcall ButtonRegisterClick(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TFLogin(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TFLogin *FLogin;
+//---------------------------------------------------------------------------
+#endif

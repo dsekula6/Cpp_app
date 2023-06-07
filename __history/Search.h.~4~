@@ -1,0 +1,21 @@
+//---------------------------------------------------------------------------
+
+#ifndef SearchH
+#define SearchH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+//---------------------------------------------------------------------------
+class TFormSearch : public TForm
+{
+__published:	// IDE-managed Components
+private:	// User declarations
+public:		// User declarations
+	__fastcall TFormSearch(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TFormSearch *FormSearch;
+//---------------------------------------------------------------------------
+#endif

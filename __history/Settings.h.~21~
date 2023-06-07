@@ -1,0 +1,40 @@
+//---------------------------------------------------------------------------
+
+#ifndef SettingsH
+#define SettingsH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include "uTPLb_BaseNonVisualComponent.hpp"
+#include "uTPLb_Codec.hpp"
+#include <System.SysUtils.hpp>
+#include "uTPLb_CryptographicLibrary.hpp"
+//---------------------------------------------------------------------------
+class TFormSettings : public TForm
+{
+__published:	// IDE-managed Components
+	TLabel *LabelFontSize;
+	TLabel *LabelTheme;
+	TComboBox *ComboBoxFontSize;
+	TComboBox *ComboBoxTheme;
+	TButton *ButtonSave;
+	TEdit *EditUsername;
+	TLabel *LabelUsername;
+	TCodec *Codec1;
+	TCryptographicLibrary *CryptographicLibrary1;
+	TLabel *LabelImageDir;
+	TEdit *EditImageDir;
+	void __fastcall ButtonSaveClick(TObject *Sender);
+	void __fastcall FormCreate(TObject *Sender);
+	void __fastcall LabelUsernameDblClick(TObject *Sender);
+	void __fastcall LabelImageDirClick(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TFormSettings(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TFormSettings *FormSettings;
+//---------------------------------------------------------------------------
+#endif

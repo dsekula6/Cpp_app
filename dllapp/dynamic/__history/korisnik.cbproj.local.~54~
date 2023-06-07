@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.781,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\korisnik.h=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\classKorisnik.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.412,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dynamic\korisnik.cpp=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dynamic\classKorisnik.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.067,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\korisnik.cbproj=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\korisnik.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.863,=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\logo.bmp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.247,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\classKorisnik.h=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dynamic\classKorisnik.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.638,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\File1.cpp=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dynamic\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.231,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\Project2.cbproj=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\korisnik.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.866,=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\logo.jpg</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.625,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\File1.cpp=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.097,=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.247,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\classKorisnik.cpp=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dynamic\classKorisnik.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.462,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\Project2PCH1.h=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\Project2PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.068,=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.927,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\korisnik.cbproj=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dynamic\korisnik.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.255,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\korisnik.cbproj=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\korisnik.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.412,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dynamic\korisnik.h=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dynamic\classKorisnik.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.837,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\Project2.cbproj=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\Project2.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.212,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\Project2PCH1.h=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\korisnikPCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.721,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\korisnikPCH1.h=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dynamic\korisnikPCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.781,C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\korisnik.cpp=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\classKorisnik.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.132,=C:\Users\Daniel\Documents\Embarcadero\Studio\Projects\dllapp\dll\korisnik.cpp</Transaction>
+  </Transactions>
+</BorlandProject>

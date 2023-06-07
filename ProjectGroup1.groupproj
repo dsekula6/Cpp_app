@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B6EA744A-8DEF-4F7B-A0A6-40375ED84AE1}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Project1.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="dllapp\dynamic\korisnik.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="HRV\Project1_HRV.bdsproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ENG\Project1_ENG.bdsproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Project1">
+        <MSBuild Projects="Project1.cbproj"/>
+    </Target>
+    <Target Name="Project1:Clean">
+        <MSBuild Projects="Project1.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project1:Make">
+        <MSBuild Projects="Project1.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="korisnik">
+        <MSBuild Projects="dllapp\dynamic\korisnik.cbproj"/>
+    </Target>
+    <Target Name="korisnik:Clean">
+        <MSBuild Projects="dllapp\dynamic\korisnik.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="korisnik:Make">
+        <MSBuild Projects="dllapp\dynamic\korisnik.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project1_HRV">
+        <MSBuild Projects="HRV\Project1_HRV.bdsproj"/>
+    </Target>
+    <Target Name="Project1_HRV:Clean">
+        <MSBuild Projects="HRV\Project1_HRV.bdsproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project1_HRV:Make">
+        <MSBuild Projects="HRV\Project1_HRV.bdsproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project1_ENG">
+        <MSBuild Projects="ENG\Project1_ENG.bdsproj"/>
+    </Target>
+    <Target Name="Project1_ENG:Clean">
+        <MSBuild Projects="ENG\Project1_ENG.bdsproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project1_ENG:Make">
+        <MSBuild Projects="ENG\Project1_ENG.bdsproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Project1;korisnik;Project1_HRV;Project1_ENG"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Project1:Clean;korisnik:Clean;Project1_HRV:Clean;Project1_ENG:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Project1:Make;korisnik:Make;Project1_HRV:Make;Project1_ENG:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

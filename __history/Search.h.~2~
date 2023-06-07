@@ -1,0 +1,32 @@
+//---------------------------------------------------------------------------
+
+#ifndef SearchH
+#define SearchH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ComCtrls.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Graphics.hpp>
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+	TListView *ListView1;
+	TProgressBar *ProgressBar1;
+	TButton *ButtonAddNew;
+	TButton *ButtonSearch;
+	TButton *ButtonThrottle1;
+	TButton *ButtonThrottle2;
+	TImage *Image1;
+	TEdit *Edit1;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm1(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif

@@ -1,0 +1,29 @@
+//---------------------------------------------------------------------------
+
+#ifndef korisnikH
+#define korisnikH
+//---------------------------------------------------------------------------
+#endif
+#include <vcl.h>
+#include <IdHashMessageDigest.hpp>
+
+#ifdef EXPORTS
+	#define DLL_EXPORT __declspec(dllexport)
+#else
+	#define DLL_EXPORT __declspec(dllexport)
+#endif
+
+class DLL_EXPORT Korisnik {
+private:
+	String username;
+	String password;
+
+public:
+	void SetUsername(String _username);
+	void SetPassword(String _password);
+	String GetUsername();
+	String GetPassword();
+	bool CompareUsername(String UserPass);
+	bool ComparePassword(String UserPass);
+
+};

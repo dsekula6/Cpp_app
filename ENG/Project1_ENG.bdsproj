@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<PersonalityInfo>
+		<Option>
+			<Option Name="Personality">W32ResourceDLL.Personality</Option>
+			<Option Name="ProjectType">ResourceDLL</Option>
+			<Option Name="Version">1.0</Option>
+			<Option Name="GUID">{CC1F314C-3426-44B4-B0DC-D5FA174E90F8}</Option>
+		</Option>
+	</PersonalityInfo>
+	<W32ResourceDLL.Personality>
+		<Source>
+			<Source Name="MainSource">Project1.dpr</Source>
+		</Source>
+		<Options>
+			<Options Name="BaseLang">1050</Options>
+			<Options Name="TargetName">..\.\Project1.ENG</Options>
+			<Options Name="BRCC_IncludePath">$(BDSINCLUDE)\windows\vcl</Options>
+			<Options Name="Company"></Options>
+			<Options Name="Configuration"></Options>
+			<Options Name="Copyright"></Options>
+			<Options Name="Description"></Options>
+			<Options Name="Trademark"></Options>
+			<Options Name="Product"></Options>
+			<Options Name="ProductVersion"></Options>
+			<Options Name="Title"></Options>
+			<Options Name="FileVersion"></Options>
+			<Options Name="Evidence"></Options>
+			<Options Name="KeyFile"></Options>
+			<Options Name="KeyName"></Options>
+		</Options>
+		<FileList><File FileName="Login.dfm" ContainerId="W32Form" ModuleName="Login.dfm"/><File FileName="MainForm.dfm" ContainerId="W32Form" ModuleName="MainForm.dfm"/><File FileName="Register.dfm" ContainerId="W32Form" ModuleName="Register.dfm"/><File FileName="Search123.dfm" ContainerId="W32Form" ModuleName="Search123.dfm"/><File FileName="Settings.dfm" ContainerId="W32Form" ModuleName="Settings.dfm"/><File FileName="Project1_DRC.rc" ContainerId="W32RC" ModuleName="Project1_DRC.rc"/></FileList></W32ResourceDLL.Personality>
+</BorlandProject>

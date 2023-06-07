@@ -1,0 +1,9 @@
+//---------------------------------------------------------------------------
+
+#ifndef korisnikH
+#define korisnikH
+//---------------------------------------------------------------------------
+#endif
+#include <vcl.h>
+
+extern "C" Korisnik* DLL_EXPORT __stdcall CreateDllClassInstance();

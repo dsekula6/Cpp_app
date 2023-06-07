@@ -1,0 +1,33 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#include <fstream>
+#pragma hdrstop
+
+#include "Reigster.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TFRegister *FRegister;
+//---------------------------------------------------------------------------
+__fastcall TFRegister::TFRegister(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TFRegister::ButtonRegisterClick(TObject *Sender)
+{
+	fstream myFile;
+	myFile.open("korisnici.txt", ios::app);
+	if (myFile.is_open()) {
+		AnsiString username = EditUsername->Text;
+		AnsiString password = EditPassword->Text;
+
+		myFile<<username<<","<<password<<"\n";
+		myFile.close();
+
+	}
+Close();
+}
+//---------------------------------------------------------------------------
+
